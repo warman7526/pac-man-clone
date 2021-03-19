@@ -2,13 +2,13 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     mr_pac.setVelocity(0, 0 - spd)
 })
 function move_sprite (s: Sprite) {
-    tiles.placeOnRandomTile(s, myTiles.tile3)
+    tiles.placeOnRandomTile(s, assets.tile`tile3`)
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mr_pac.setVelocity(0 - spd, 0)
 })
 info.onCountdownEnd(function () {
-	
+    game.over(true)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     mr_pac.setVelocity(spd, 0)
@@ -150,9 +150,9 @@ move_sprite(ghost2)
 move_sprite(ghost3)
 move_sprite(ghost0)
 scene.cameraFollowSprite(mr_pac)
-tiles.placeOnRandomTile(mr_pac, myTiles.tile1)
+tiles.placeOnRandomTile(mr_pac, assets.tile`tile1`)
 info.setScore(0)
-info.startCountdown(180)
+info.startCountdown(150)
 mr_pac.setFlag(SpriteFlag.StayInScreen, true)
 forever(function () {
     music.playMelody("C G F E C5 C5 C F ", 300)
