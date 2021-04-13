@@ -29,7 +29,8 @@
             "myTiles.tile3",
             "myTiles.tile1",
             "myTiles.tile1"
-        ]
+        ],
+        "displayName": "level"
     },
     "level_0": {
         "id": "level_0",
@@ -41,7 +42,8 @@
             "myTiles.tile3",
             "myTiles.tile1",
             "myTiles.tile1"
-        ]
+        ],
+        "displayName": "level_0"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
